@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Die Wissenschaft des Kochens</title>
+  <style>
+    :root {
+      --ink: #202a35;
+      --muted: #526171;
+      --accent: #9a4f25;
+      --accent-light: #f7eee7;
+      --line: #d9e0e6;
+      --paper: #ffffff;
+      --background: #f3f5f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, #263746, #65452f);
+      color: white;
+      padding: 3.5rem 1.25rem;
+    }
+    header .inner, main, footer { max-width: 900px; margin: 0 auto; }
+    header h1 { margin: 0 0 .6rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; }
+    header p { max-width: 720px; margin: 0; color: #f1e9e2; font-size: 1.1rem; }
+    main { padding: 1.5rem 1rem 3rem; }
+    section, .callout {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(1rem, 3vw, 1.6rem);
+      margin: 1rem 0;
+      box-shadow: 0 3px 12px rgba(25, 39, 52, .04);
+    }
+    h2 { margin-top: 0; font-size: 1.5rem; line-height: 1.25; }
+    h3 { margin-bottom: .35rem; font-size: 1.1rem; }
+    p { margin: .6rem 0; }
+    ul, ol { padding-left: 1.35rem; }
+    li { margin: .35rem 0; }
+    .callout { background: var(--accent-light); border-color: #e6c9b5; }
+    .callout strong { color: #753b1b; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+      background: #fff;
+    }
+    table { width: 100%; border-collapse: collapse; margin: .8rem 0; }
+    th, td { border: 1px solid var(--line); text-align: left; padding: .7rem; vertical-align: top; }
+    th { background: #edf1f4; }
+    .small { color: var(--muted); font-size: .93rem; }
+    .steps li { margin-bottom: .65rem; }
+    footer { padding: 0 1rem 2.5rem; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 600px) {
+      table, tbody, tr, td { display: block; }
+      thead { display: none; }
+      tr { border: 1px solid var(--line); margin-bottom: .75rem; border-radius: 8px; overflow: hidden; }
+      td { border: 0; border-bottom: 1px solid var(--line); }
+      td:last-child { border-bottom: 0; }
+      td::before { content: attr(data-label); display: block; font-weight: 700; margin-bottom: .2rem; }
+    }
+    @media print {
+      body { background: white; }
+      header { background: #263746 !important; print-color-adjust: exact; }
+      section, .callout { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <h1>Die Wissenschaft des Kochens</h1>
+    <p>Wie Wärme, Wasser, Nährstoffe und chemische Reaktionen Geschmack, Farbe und Konsistenz unserer Lebensmittel verändern.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Einleitung</h2>
+    <p>Kochen ist mehr als das Erhitzen von Lebensmitteln. Wärme verändert die Struktur von Pflanzenzellen, Proteinen und Stärke. Wasser beeinflusst die Temperatur und den Garprozess, während chemische Reaktionen für typische Aromen und Bräunung sorgen. Wer diese Vorgänge versteht, kann Garverfahren besser auswählen und Lebensmittel gezielter zubereiten.</p>
+  </section>
+
+  <section>
+    <h2>1. Warum funktioniert Kochen? – Wärmeübertragung</h2>
+    <p>Wärmeenergie wird spontan von einem wärmeren auf einen kälteren Körper übertragen. Beim Kochen sind drei Arten besonders wichtig:</p>
+    <div class="grid">
+      <div class="mini">
+        <h3>Wärmeleitung</h3>
+        <p>Wärme wird durch direkten Kontakt weitergegeben. Der heiße Pfannenboden überträgt Energie an das Fleisch; innerhalb des Fleischstücks wandert Wärme von außen nach innen.</p>
+      </div>
+      <div class="mini">
+        <h3>Wärmeströmung (Konvektion)</h3>
+        <p>Bewegte Flüssigkeiten und Gase transportieren Wärme. Im Topf steigen wärmere Wasserbereiche auf und kühlere sinken ab, wodurch Wärme verteilt wird.</p>
+      </div>
+      <div class="mini">
+        <h3>Wärmestrahlung</h3>
+        <p>Elektromagnetische Strahlung überträgt Energie, beispielsweise von glühender Kohle, einem Grillheizelement oder den Heizstäben eines Backofens.</p>
+      </div>
+    </div>
+    <p>Bei normalem Luftdruck siedet reines Wasser ungefähr bei 100&nbsp;°C. Solange Wasser siedet, bleibt seine Temperatur im Allgemeinen nahe diesem Wert, während weitere Energie vor allem für die Verdampfung benötigt wird. Eine trockene Pfannenoberfläche kann deutlich heißer werden.</p>
+  </section>
+
+  <section>
+    <h2>2. Warum werden Lebensmittel beim Kochen weich?</h2>
+    <h3>Gemüse</h3>
+    <p>Hitze verändert Zellmembranen und die Struktur der Zellwände. Auch Pektine, die Pflanzenzellen miteinander verbinden, können sich verändern. Der Zellinnendruck nimmt ab, und das Gemüse wird leichter zu schneiden und zu kauen. Wie schnell es weich wird, hängt unter anderem von Sorte, Stückgröße, Temperatur und Garzeit ab.</p>
+    <h3>Fleisch</h3>
+    <p>Muskelproteine denaturieren und ziehen sich zusammen. Dabei kann Wasser austreten, wodurch Fleisch fester und trockener wird. Bei längerer feuchter Garung wird Kollagen im Bindegewebe allmählich zu Gelatine umgewandelt. Das macht kollagenreiche Stücke zarter.</p>
+    <h3>Stärkehaltige Lebensmittel</h3>
+    <p>Stärkekörner nehmen bei ausreichender Wärme und Feuchtigkeit Wasser auf, quellen und verkleistern. Ihre ursprüngliche geordnete Struktur verändert sich. Reis, Kartoffeln und Nudeln werden dadurch weicher; freigesetzte Stärke kann Flüssigkeiten außerdem andicken.</p>
+    <p><strong>Kernaussage:</strong> Weichwerden ist kein einzelner Vorgang. Je nach Lebensmittel sind Zellveränderungen, Proteinveränderungen, Wasseraufnahme oder der Abbau von Bindegewebe ausschlaggebend.</p>
+  </section>
+
+  <section>
+    <h2>3. Hauptnährstoffe und Mikronährstoffe</h2>
+    <p>Makronährstoffe werden in größeren Mengen benötigt und liefern zum Teil Energie. Mikronährstoffe werden in kleineren Mengen benötigt und erfüllen wichtige Körperfunktionen.</p>
+    <table>
+      <thead><tr><th>Gruppe</th><th>Beispiele und Funktion</th><th>Verhalten beim Kochen</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Gruppe">Kohlenhydrate</td><td data-label="Beispiele und Funktion">Stärke und Zucker; wichtige Energiequelle</td><td data-label="Verhalten">Stärke verkleistert mit Wasser und Wärme. Zucker kann karamellisieren oder an der Maillard-Reaktion teilnehmen.</td></tr>
+        <tr><td data-label="Gruppe">Proteine (Eiweiße)</td><td data-label="Beispiele und Funktion">Fleisch, Eier, Milchprodukte, Hülsenfrüchte; Aufbau und Reparatur von Gewebe</td><td data-label="Verhalten">Denaturieren und verändern ihre Struktur; dadurch verändern sich Festigkeit und Wasserbindung.</td></tr>
+        <tr><td data-label="Gruppe">Fette</td><td data-label="Beispiele und Funktion">Öle, Butter, Nüsse; Energielieferant und Bestandteil von Zellstrukturen</td><td data-label="Verhalten">Übertragen Wärme und lösen fettlösliche Aromastoffe. Zu starke Erhitzung kann Rauch und Abbauprodukte verursachen.</td></tr>
+        <tr><td data-label="Gruppe">Vitamine</td><td data-label="Beispiele und Funktion">Vitamin C, B-Vitamine, A, D, E und K</td><td data-label="Verhalten">Verluste hängen vom Vitamin, von Temperatur, Zeit, Sauerstoff und Wasser ab. Vitamin C und manche B-Vitamine sind besonders empfindlich.</td></tr>
+        <tr><td data-label="Gruppe">Mineralstoffe</td><td data-label="Beispiele und Funktion">Kalium, Calcium, Eisen, Magnesium; vielfältige Körperfunktionen</td><td data-label="Verhalten">Werden durch normales Kochen nicht einfach zerstört, können aber ins Kochwasser übergehen.</td></tr>
+        <tr><td data-label="Gruppe">Wasser</td><td data-label="Beispiele und Funktion">In fast allen frischen Lebensmitteln enthalten</td><td data-label="Verhalten">Löst Stoffe, transportiert Wärme und beeinflusst Konsistenz sowie Verdampfung.</td></tr>
+      </tbody>
+    </table>
+    <p>Vitamin A, D, E und K sind fettlöslich. Vitamin C und viele B-Vitamine sind wasserlöslich. Dämpfen oder kurzes Garen mit wenig Wasser kann Verluste durch Auslaugen reduzieren. Mineralstoffe werden dabei nicht durch Hitze vernichtet, sondern können mit der Flüssigkeit verloren gehen.</p>
+  </section>
+
+  <section>
+    <h2>4. Zucker in Lebensmitteln und das Anbrennen</h2>
+    <table>
+      <thead><tr><th>Lebensmittel</th><th>Zucker und Kohlenhydrate</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Lebensmittel">Kartoffeln, Reis, Getreide</td><td data-label="Zucker und Kohlenhydrate">Vor allem Stärke – lange Ketten aus Glukosebausteinen; je nach Lebensmittel auch kleinere Zuckermengen.</td></tr>
+        <tr><td data-label="Lebensmittel">Fleisch</td><td data-label="Zucker und Kohlenhydrate">Sehr wenig Kohlenhydrate. Je nach Gewebe können geringe Mengen Glukose oder Glykogen vorkommen.</td></tr>
+        <tr><td data-label="Lebensmittel">Gemüse</td><td data-label="Zucker und Kohlenhydrate">Je nach Sorte Glukose, Fruktose, Saccharose und teilweise Stärke. Zwiebeln und Karotten enthalten natürliche Zucker.</td></tr>
+      </tbody>
+    </table>
+    <h3>Wie kommt es zum Anbrennen?</h3>
+    <ol class="steps">
+      <li><strong>Feuchtigkeit ist vorhanden:</strong> Wasser nimmt Wärme auf und verdampft. Solange eine Oberfläche feucht ist, wird ihre Temperatur durch die Verdampfung begrenzt.</li>
+      <li><strong>Die Oberfläche trocknet:</strong> Wenn die Feuchtigkeit an der Kontaktfläche weitgehend verdampft ist, kann die Temperatur dort deutlich über 100&nbsp;°C steigen.</li>
+      <li><strong>Bräunung setzt ein:</strong> Maillard-Reaktion und gegebenenfalls Karamellisierung erzeugen Farbe und Röstaromen.</li>
+      <li><strong>Zu starke oder zu lange Hitze:</strong> Aromastoffe zerfallen, die Oberfläche wird bitter und kann schließlich verkohlen.</li>
+    </ol>
+    <div class="callout">
+      <strong>Wichtig zum „Wasserschild“:</strong> Wasser wirkt als Wärmepuffer, ist aber kein vollständiger Schutzschild. Es kommt auf die Feuchtigkeit an der jeweiligen Kontaktfläche an – nicht nur darauf, ob irgendwo im Topf noch Flüssigkeit vorhanden ist.
+    </div>
+    <h3>Was passiert, wenn man Wasser in einen heißen Topf oder eine heiße Pfanne gibt?</h3>
+    <p>Das kältere Wasser nimmt Wärme vom heißen Gefäß auf. Ein Teil kann rasch verdampfen, und das Gefäß kühlt ab. Das Wasser wird aber nicht grundsätzlich sofort vollständig auf 100&nbsp;°C gebracht und auch nicht automatisch der gesamte Topf auf genau 100&nbsp;°C abgekühlt.</p>
+    <p>Bei normalem Luftdruck siedet reines Wasser ungefähr bei 100&nbsp;°C. Die tatsächliche Temperatur hängt von Wassermenge, Ausgangstemperaturen, Wärmekapazitäten, Verdampfung und weiterer Wärmezufuhr ab. Eine Pfanne kann an trockenen Stellen weiterhin heißer sein als das Wasser. Wird eine heiße Pfanne schlagartig mit Wasser abgekühlt, kann es außerdem zu heftigem Spritzen und bei bestimmten Pfannen zu Materialschäden kommen.</p>
+  </section>
+
+  <section>
+    <h2>5. Wichtige Lebensmittelgruppen und ihre Nährstoffe</h2>
+    <ul>
+      <li><strong>Getreide, Reis, Nudeln und Kartoffeln:</strong> hauptsächlich Kohlenhydrate beziehungsweise Stärke; je nach Sorte auch Ballaststoffe, Proteine und Mineralstoffe.</li>
+      <li><strong>Fleisch, Fisch und Eier:</strong> Proteine, unterschiedliche Fettmengen, B-Vitamine und Mineralstoffe wie Eisen oder Zink.</li>
+      <li><strong>Gemüse und Obst:</strong> Wasser, Ballaststoffe, Vitamine, Mineralstoffe und natürliche Zucker.</li>
+      <li><strong>Hülsenfrüchte:</strong> pflanzliche Proteine, Stärke, Ballaststoffe und Mineralstoffe. Einweichen und ausreichendes Garen verbessern bei vielen Sorten die Bekömmlichkeit.</li>
+      <li><strong>Öle, Nüsse und Samen:</strong> vor allem Fette, außerdem je nach Sorte Vitamin E, Proteine und Mineralstoffe.</li>
+      <li><strong>Milchprodukte:</strong> je nach Produkt Proteine, Fett, Milchzucker (Laktose) und Calcium.</li>
+    </ul>
+    <p>Die Zusammensetzung variiert je nach Sorte, Verarbeitung und Zubereitung. Es gibt deshalb keine einheitliche Nährstoffzusammensetzung für eine ganze Lebensmittelgruppe.</p>
+  </section>
+
+  <section>
+    <h2>6. Fleischproteine und Kollagen</h2>
+    <h3>Muskelproteine</h3>
+    <p>Beim Erhitzen denaturieren Muskelproteine: Ihre räumliche Struktur verändert sich. Sie ziehen sich zusammen und können Wasser herauspressen. Das Fleisch wird fester. Zu hohe Temperaturen oder zu langes Garen können es trocken machen.</p>
+    <h3>Kollagen</h3>
+    <p>Kollagen ist ein Strukturprotein im Bindegewebe. Bei längerer Garzeit und ausreichend Feuchtigkeit wird es allmählich in Gelatine umgewandelt. Gelatine trägt zu einer weichen, saftigen und teilweise gelartigen Konsistenz bei.</p>
+    <p><strong>Praktische Folge:</strong> Zarte, kollagenarme Stücke werden häufig kurz gebraten. Kollagenreiche Stücke wie Wade, Schulter oder manche Schmorstücke profitieren dagegen oft von längerer Garzeit bei niedriger Temperatur und ausreichend Flüssigkeit.</p>
+  </section>
+
+  <section>
+    <h2>7. Die Maillard-Reaktion</h2>
+    <p>Die Maillard-Reaktion ist eine Gruppe chemischer Reaktionen zwischen reduzierenden Zuckern und Aminogruppen, beispielsweise aus Aminosäuren oder Proteinen. Sie ist eine wesentliche Ursache für die Bräunung und die komplexen Röstaromen beim Braten, Rösten und Backen.</p>
+    <ul>
+      <li><strong>Optisch:</strong> Die Oberfläche wird goldbraun bis dunkelbraun.</li>
+      <li><strong>Geschmacklich:</strong> Es entstehen unter anderem röstige, nussige, würzige und fleischige Aromen.</li>
+      <li><strong>Einflussfaktoren:</strong> Temperatur, Zeit, Feuchtigkeit, pH-Wert und die vorhandenen Zucker und Aminoverbindungen.</li>
+    </ul>
+    <div class="callout">
+      <strong>Temperatur als Orientierung:</strong> Für kräftige Bräunung beim Braten ist ein Oberflächenbereich von ungefähr 140–170&nbsp;°C häufig ein brauchbarer Richtwert. Das ist jedoch kein universelles Optimum für alle Maillard-Reaktionen. Die Reaktion beginnt nicht erst bei 140&nbsp;°C; bei höheren Temperaturen läuft sie meist schneller, gleichzeitig steigt das Risiko des Verbrennens.
+    </div>
+    <p>Die Maillard-Reaktion ist nicht dasselbe wie Karamellisierung. Bei der Karamellisierung wird Zucker durch Wärme umgewandelt; bei der Maillard-Reaktion reagieren reduzierende Zucker mit Aminoverbindungen.</p>
+    <h3>Der Kochlöffel-Test</h3>
+    <p>Bei ausreichend heißem Fett können sich an einem trockenen Holzlöffel kleine Bläschen bilden. Das ist höchstens ein grober Hinweis: Restfeuchtigkeit im Holz kann ebenfalls Bläschen verursachen. Der Test misst keine zuverlässige Temperatur. Ein Küchenthermometer ist genauer. Beginnt Öl deutlich zu rauchen, ist es für viele Zubereitungen bereits zu heiß.</p>
+  </section>
+
+  <section>
+    <h2>8. Welche Rolle spielt Fett bei der Wärmeübertragung?</h2>
+    <p>Eine dünne Fettschicht verbessert den thermischen Kontakt zwischen Pfannenboden und Lebensmittel, indem sie kleine Unebenheiten und Zwischenräume ausfüllt. Fett unterstützt so die Wärmeübertragung und die gleichmäßige Bräunung der Kontaktfläche.</p>
+    <p>Zusätzlich transportiert Fett fettlösliche Aromastoffe und beeinflusst Geschmack und Mundgefühl. Es macht die Temperatur aber nicht automatisch überall gleich: Auch Pfannenmaterial, Herd, Menge des Garguts und Kontaktfläche spielen eine Rolle. Jedes Fett hat zudem eine eigene Hitzestabilität.</p>
+  </section>
+
+  <section>
+    <h2>9. Unterschied zwischen Topf und Pfanne</h2>
+    <div class="grid">
+      <div class="mini">
+        <h3>Topf</h3>
+        <ul>
+          <li>Hohe Seitenwände</li>
+          <li>Geeignet für größere Flüssigkeitsmengen</li>
+          <li>Gut für Suppen, Nudeln, Gemüse und Schmorgerichte</li>
+          <li>Wird oft für feuchte Garverfahren genutzt</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h3>Pfanne</h3>
+        <ul>
+          <li>Flacher Boden und niedrige Seitenwände</li>
+          <li>Große freie Oberfläche</li>
+          <li>Gut für Braten, Anrösten und Reduzieren</li>
+          <li>Feuchtigkeit kann leichter entweichen</li>
+        </ul>
+      </div>
+    </div>
+    <p>Die Form beeinflusst, wie gut Dampf entweicht und wie viel Kontaktfläche für das Braten zur Verfügung steht. Auch in einem Topf kann man anbraten; eine tiefe Pfanne kann zum Schmoren verwendet werden. Entscheidend ist die passende Kombination aus Gefäß, Temperatur, Flüssigkeit und Garzeit.</p>
+  </section>
+
+  <section>
+    <h2>10. Wie brät man Fleisch richtig?</h2>
+    <h3>A. Zartes, kollagenarmes Fleisch – kurz und gezielt braten</h3>
+    <ol class="steps">
+      <li><strong>Vorbereiten:</strong> Fleisch bei Bedarf trocken tupfen. Eine trockene Oberfläche kann schneller bräunen.</li>
+      <li><strong>Pfanne vorheizen:</strong> Eine geeignete Pfanne erhitzen und eine passende Menge hitzestabiles Öl verwenden.</li>
+      <li><strong>Fleisch einlegen:</strong> Die Pfanne nicht überfüllen, damit sie nicht zu stark abkühlt und sich weniger Wasserdampf staut.</li>
+      <li><strong>Anbraten:</strong> Das Fleisch ungestört bräunen lassen und wenden, wenn sich eine Kruste entwickelt hat.</li>
+      <li><strong>Gargrad kontrollieren:</strong> Dicke Stücke bei Bedarf bei reduzierter Hitze oder im Ofen fertig garen. Die sichere Kerntemperatur hängt von Fleischart und Zubereitung ab.</li>
+      <li><strong>Ruhen lassen:</strong> Je nach Stück kurz ruhen lassen und nach Möglichkeit quer zur Faser schneiden.</li>
+    </ol>
+    <p>Beispiele sind zarte Steaks oder Filetstücke. Lange Schmorzeiten sind bei diesen Stücken meist nicht nötig und können sie trocken machen.</p>
+
+    <h3>B. Kollagenreiches Fleisch – anbraten und schmoren</h3>
+    <p>Bei kollagenreichen Stücken wie Rinderwade oder Schulter ist das Ziel, zunächst Röstaromen zu erzeugen und danach das Bindegewebe durch längeres feuchtes Garen zart zu machen.</p>
+    <ol class="steps">
+      <li><strong>Maillard-Reaktion:</strong> Das Fleisch trocken tupfen und portionsweise in einem geeigneten heißen Topf oder Bräter kräftig anbraten, bis eine braune Kruste entsteht. Zu viel Fleisch auf einmal würde die Temperatur senken und die Feuchtigkeit erhöhen.</li>
+      <li><strong>Mit Flüssigkeit ablöschen:</strong> Wasser, Brühe oder eine geeignete Schmorflüssigkeit hinzugeben. Die Flüssigkeit nimmt Wärme auf, kühlt den Topf ab und löst gebräunte Röststoffe vom Boden. Das ist eine gezielte Abkühlung, aber keine präzise Einstellung auf 140–170&nbsp;°C. Sobald reichlich Flüssigkeit vorhanden ist, liegt das feuchte Gargut bei normalem Luftdruck typischerweise nahe der Siedetemperatur oder darunter.</li>
+      <li><strong>Langsam schmoren:</strong> Den Topf abdecken und das Fleisch etwa 2–3 Stunden bei kleiner Hitze sanft köcheln lassen. Die Flüssigkeit sollte nur leicht simmern, nicht stark sprudelnd kochen. Je nach Stückgröße, Tier, Zuschnitt und gewünschter Zartheit kann die Garzeit kürzer oder länger sein.</li>
+      <li><strong>Garzustand prüfen:</strong> Das Fleisch ist fertig, wenn es sich leicht mit einer Gabel zerteilen lässt. Wenn es noch fest ist, braucht das Kollagen häufig mehr Zeit. Bei Bedarf etwas Flüssigkeit nachgießen.</li>
+    </ol>
+    <div class="callout">
+      <strong>Warum funktioniert diese Methode?</strong> Das Anbraten erzeugt Röstaromen. Beim anschließenden Schmoren sorgt die feuchte Wärme über längere Zeit dafür, dass Kollagen zunehmend zu Gelatine umgewandelt wird. Die niedrige Temperatur dient dabei nicht dazu, die Maillard-Reaktion fortzusetzen, sondern das Fleisch schonend zart zu garen.
+    </div>
+  </section>
+
+  <section>
+    <h2>Zusammenfassung</h2>
+    <p>Die Wissenschaft des Kochens beruht auf dem Zusammenspiel von Wärmeübertragung, Wasser, chemischen Reaktionen und Veränderungen der Lebensmittelstruktur. Wärme kann durch Leitung, Strömung und Strahlung übertragen werden. Gemüse wird durch Veränderungen seiner Zellstruktur weich, Stärke verkleistert und Fleisch verändert sich durch die Denaturierung von Proteinen. Kollagenreiche Fleischstücke benötigen oft längere feuchte Garzeiten.</p>
+    <p>Wasser begrenzt die Temperatur feuchter Oberflächen durch Verdampfung. Wenn eine Oberfläche trockener wird, kann sie heiß genug für kräftige Bräunung werden. Die Maillard-Reaktion erzeugt dabei wichtige Röstaromen. Zu starke Hitze führt jedoch zum Anbrennen. Mit dem Verständnis dieser Vorgänge lassen sich Garverfahren, Temperatur und Garzeit gezielt auswählen.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Hinweis: Temperatur- und Zeitangaben sind Richtwerte. Die tatsächlichen Ergebnisse hängen von Lebensmittel, Menge, Gefäß, Herd, Feuchtigkeit und Zubereitungsziel ab.</p>
+</footer>
+</body>
+</html>
